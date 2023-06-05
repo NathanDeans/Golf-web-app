@@ -28,8 +28,11 @@ async function getData (input) {
         const parkObj = {
             name: data.data[0].name,
             description: data.data[0].description,
+            image1: data.data[0].images[0].url,
+            image2: data.data[0].images[1].url,
+            image3: data.data[0].images[2].url,
         }
-        console.log(parkObj.name)
+        console.log(parkObj)
         displayPark(parkObj)
     }
 
@@ -49,9 +52,53 @@ submitButton.addEventListener("click", () => {
 
 function displayPark(object) {
     let parkName = document.getElementById("parkName");
-    let parkDescript = document.getElementById("descript")
+    let parkDescript = document.getElementById("descript");
+
+    
+    
+    let displayArea = document.getElementById("displayArea")
+    displayArea.style.opacity = "1";
+    
+   
+
 
 
     parkName.textContent = `${object.name}`
     parkDescript.textContent = `${object.description}`
+
+
+   let img1 = document.getElementById("img1");
+   let img2 = document.getElementById("img2");
+   let img3 = document.getElementById("img3");
+
+   img1.src = `${object.image1}`
+   img2.src = `${object.image2}`
+   img3.src = `${object.image3}`
+
+
+
+
+    
 }
+
+
+
+const scrollers = document.querySelectorAll("[data-carousel-button]");
+
+scrollers.forEach((scroller) => {
+  scroller.addEventListener("click", () => {
+    const offset = scroller.dataset.carouselButton === "next" ? 1 : -1;
+    const slides = scroller
+     .closest("[data-carousel]")
+     .querySelector("[data-slides]");
+
+    const activeSlide = slides.querySelector("[data-active]");
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+    if (newIndex < 0) newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length) newIndex = 0;
+
+    slides.children[newIndex].dataset.active = true;
+    delete activeSlide.dataset.active;
+  });
+});
+

@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>Golf Web App - Greenfinder</title>
+    <title>National Park Web App</title>
 </head>
 <body>
     <div class="content">
+        <div class="headerArea">
    <h1 class="heroHeader">National Park Explorer</h1>
    <h2>Enter your desired park and dates below</h2>
    <div class="inputArea">
@@ -19,13 +20,34 @@
     <br>
     <button id="submit">Submit</button>
     </div>
+        </div>
 
-    <div class="displayArea">
+    <div class="displayArea" id="displayArea">
         <h2 id="parkName"></h2>
         <p id="descript"></p>
-    </div>
+       <button class="parkButton">Park Website</button>
+   
+
+
+    <div id="carouselArea" class="carousel"   data-carousel>
+        
+        <img class="carousel-button prev" data-carousel-button="prev" src="left.png">
+
+        <img class="carousel-button next" data-carousel-button="next" src="right.png">
+
+
+        <ul data-slides>
+          
+          <li class="slide" data-active><img id="img1" /></li>
+          
+          <li class="slide"> <img id="img2" /></li>
+          
+          <li class="slide"><img id="img3"  /></li>
+          
+        </div>
 
     </div>
+</div>
 
     
     <script src="logic.js"></script>

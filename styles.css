@@ -18,11 +18,38 @@
 
 .inputArea {
     display: flex;
-    
-    justify-content: center;
-    align-items: center;
+    margin-top: 3vh;
+    justify-content: flex-end;
+    width: 80vw;
+    gap: 10vw;
 
+}
+
+#location {
+    border-radius: 5px;
+    border: 0px;
+}
+
+#startDate {
+    border-radius: 5px;
+}
+
+#submit {
+    font-size: 1rem;
     
+     background-color: white;
+     display: flex;
+     justify-content: flex-end;
+     align-content: flex-end;
+     border: 0px;
+}
+
+.searchArea {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    border-radius: 5px;
+    width: 20vw;
 }
 
 .headerArea{
@@ -35,8 +62,12 @@
 }
 
 h2 {
-    color: black;
+    color: white;
    
+}
+
+p {
+    color: white;
 }
 
 * {
@@ -51,28 +82,30 @@ h2 {
 
 .displayArea{
     width: 75vw;
-    height: 30vh;
+    height: 40vh;
    display: grid;
    grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 2fr 1fr;
+   grid-template-rows: 0.5fr 2fr 1fr;
    gap: 10px;
     opacity: 0;
-    padding: 50px;
-    background-color: white;
+    padding: 10px;
+    
     border-radius: 10px;
 
 }
 
-.parkButton {
-    grid-row-start: 3;
-    grid-column-start: 1;
-}
 
+
+#parkName{
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
 
 #descript {
     grid-row-start: 2;
-    grid-column-start: 1;
-    grid-column-end: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 2;
 }
 
 ul{
@@ -86,7 +119,7 @@ ul{
     position: relative;
     grid-row-start: 1;
     grid-row-end: 3;
-    grid-column-start: 2;
+    grid-column-start: 1;
 }
 
 .slide {
@@ -101,8 +134,7 @@ ul{
  height: 100%;
  object-fit: cover;
  object-position: center;
- border: solid white 5px;
-    border-radius: 10px;
+ border-radius: 15px;
 }
 
 .slide[data-active] {
@@ -121,11 +153,11 @@ ul{
   width: 3vw;
   top: 50%;
   transform: translateY(-50%);
-  color:rgba(255, 255, 255, .5);
+  color:rgba(255, 255, 255, 0.5);
   cursor: pointer;
   border-radius: .25rem;
-  padding: 0 .5rem;
-  background-color: rgba(0,0,0,.1)
+  padding: 0.5rem;
+  
 }
 
 .carousel-button.prev {
@@ -138,6 +170,19 @@ ul{
 
   li {
     list-style-type: none;
+  }
+
+
+  #weatherArea{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    width: 75vw;
+  }
+
+  #weatherArea > div {
+    color: white;
+    
   }
 
  

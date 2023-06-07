@@ -14,16 +14,35 @@
    <div class="inputArea">
 
     <input type="date" id="startDate" placeholder="startDate">
+
     <div class="searchArea">
     <input type="text" id="location" size="40" placeholder="Select desired park">
-    
+    <select name="months" id="months">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+
+    </select>
+
+    <select name="parks" id="parks">
+        <option value="acadia">Acadia National Park</option>
+    </select>
     <button id="submit">🔎</button>
     </div>
     </div>
         </div>
 
     <div class="displayArea" id="displayArea">
-        <h2 id="parkName"></h2>
+        <h1 id="parkName"></h1>
         <p id="descript"></p>
        
    
@@ -31,11 +50,7 @@
 
     <div id="carouselArea" class="carousel"   data-carousel>
         
-        <img class="carousel-button prev" data-carousel-button="prev" src="left.png">
-
-        <img class="carousel-button next" data-carousel-button="next" src="right.png">
-
-
+       
         <ul data-slides>
           
           <li class="slide" data-active><img id="img1" /></li>
@@ -48,51 +63,57 @@
 
     </div>
 
+    <div id="contactInfo">
+        <div id="address"></div>
+        <div id="phone"></div>
+        <div id="email"></div>
+    </div>
+
     <div id="weatherArea">
         <div class="day1">
-      <div id="high0"></div>
-      <div id="low0"></div>
-      <div id="summary0"></div>
+      <div id="high0" class="high"></div>
+      <div id="low0" class="low"></div>
+     
       <img id="icon0">
 
         </div>
 
       <div class="day2">
-      <div id="high1"></div>
+      <div id="high1" class="high"></div>
       <div id="low1"></div>
-      <div id="summary1"></div>
+     
       <img id="icon1">
     </div>
 
 
         <div class="day3">
-      <div id="high2"></div>
+      <div id="high2" class="high"></div>
       <div id="low2"></div>
-      <div id="summary2"></div>
+      
       <img id="icon2">
     </div>
 
 
         <div class="day4">
-      <div id="high3"></div>
+      <div id="high3" class="high"></div>
       <div id="low3"></div>
-      <div id="summary3"></div>
+      
       <img id="icon3">
     </div>
 
 
      <div class="day5">
-      <div id="high4"></div>
+      <div id="high4" class="high"></div>
       <div id="low4"></div>
-      <div id="summary4"></div>
+      
       <img id="icon4">
     </div>
 
 
         <div class="day6">
-      <div id="high5"></div>
+      <div id="high5" class="high"></div>
       <div id="low5"></div>
-      <div id="summary5"></div>
+      
       <img id="icon5">
     </div>
 
@@ -100,66 +121,66 @@
 
 
     <div class="day7">
-      <div id="high6"></div>
+      <div id="high6" class="high"></div>
       <div id="low6"></div>
-      <div id="summary6"></div>
+      
       <img id="icon6">
     </div>
 
 
 
       <div class="day8">
-      <div id="high7"></div>
+      <div id="high7" class="high"></div>
       <div id="low7"></div>
-      <div id="summary7"></div>
+     
       <img id="icon7">
     </div>
 
 
       <div class="day9">
-      <div id="high8"></div>
+      <div id="high8" class="high"></div>
       <div id="low8"></div>
-      <div id="summary8"></div>
+      
       <img id="icon8">
     </div>
 
 
         <div class="day10">
-      <div id="high9"></div>
+      <div id="high9" class="high"></div>
       <div id="low9"></div>
-      <div id="summary9"></div>
+      
       <img id="icon9">
     </div>
 
 
         <div class="day11">
-      <div id="high10"></div>
+      <div id="high10" class="high"></div>
       <div id="low10"></div>
-      <div id="summary10"></div>
+      
       <img id="icon10">
     </div>
 
       <div class="day12">
-      <div id="high11"></div>
+      <div id="high11" class="high"></div>
       <div id="low11"></div>
-      <div id="summary11"></div>
+      
       <img id="icon11">
     </div>
 
 
 
         <div class="day13">
-      <div id="high12"></div>
+      <div id="high12" class="high"></div>
       <div id="low12"></div>
-      <div id="summary12"></div>
+      
       <img id="icon12">
     </div>
       
 
         <div class="day14">
-      <div id="high13"></div>
+      <div id="high13" class="high"></div>
       <div id="low13"></div>
-      <div id="summary13"></div>
+      
       <img id="icon13">
     </div>
     </div>

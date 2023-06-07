@@ -33,8 +33,11 @@ async function getData (input) {
             image1: data.data[0].images[0].url,
             image2: data.data[0].images[1].url,
             image3: data.data[0].images[2].url,
+            address: data.data[0].addresses[0].line1 + ", " + data.data[0].addresses[0].city + ", " + data.data[0].addresses[0].stateCode ,
+            email: data.data[0].contacts.emailAddresses[0].emailAddress,
+            phoneNumber: data.data[0].contacts.phoneNumbers[0].phoneNumber,
         }
-        console.log(parkObj)
+        console.log(result)
         
         displayPark(parkObj)
         getWeatherData(parkObj)
@@ -66,7 +69,7 @@ const filterWeatherData = (weatherData) => {
     const weatherObj = {
         high: weatherData.daily.data[0].temperature_max,
         low: weatherData.daily.data[0].temperature_min,
-        summary: weatherData.daily.data[0].weather,
+        day: weatherData.daily.data[0].day,
         icon: weatherData.daily.data[0].icon,
 
         high1: weatherData.daily.data[1].temperature_max,
@@ -166,6 +169,14 @@ function displayPark(object) {
     let displayArea = document.getElementById("displayArea")
     displayArea.style.opacity = "1";
     
+    let address = document.getElementById("address");
+    address.textContent = `Address: ${object.address}`
+
+    let phoneNumber = document.getElementById("phone");
+    phoneNumber.textContent = `Phone Number: ${object.phoneNumber}`;
+
+    let email = document.getElementById("email");
+    email.textContent = `Email: ${object.email}`
    
 
 
@@ -261,74 +272,74 @@ function displayWeather(weatherObject) {
 
 
 
-        high0.textContent = `${weatherObject.high}`
-        low0.textContent = `${weatherObject.low}`
-        summary0.textContent = `${weatherObject.summary.replace("_"," ")}`
+        high0.textContent = `${weatherObject.high}°`
+        low0.textContent = `${weatherObject.low}°`
+        
         icon0.src = `${weatherObject.icon}.png`
 
-        high1.textContent = `${weatherObject.high1}`
-        low1.textContent = `${weatherObject.low1}`
-        summary1.textContent = `${weatherObject.summary1.replace("_"," ")}`
+        high1.textContent = `${weatherObject.high1}°`
+        low1.textContent = `${weatherObject.low1}°`
+        
         icon1.src = `${weatherObject.icon1}.png`
 
-        high2.textContent = `${weatherObject.high2}`
-        low2.textContent = `${weatherObject.low2}`
-        summary2.textContent = `${weatherObject.summary2.replace("_"," ")}`
+        high2.textContent = `${weatherObject.high2}°`
+        low2.textContent = `${weatherObject.low2}°`
+        
         icon2.src = `${weatherObject.icon2}.png`
 
-        high3.textContent = `${weatherObject.high3}`
-        low3.textContent = `${weatherObject.low3}`
-        summary3.textContent = `${weatherObject.summary3.replace("_"," ")}`
+        high3.textContent = `${weatherObject.high3}°`
+        low3.textContent = `${weatherObject.low3}°`
+        
         icon3.src = `${weatherObject.icon3}.png`
 
-        high4.textContent = `${weatherObject.high4}`
-        low4.textContent = `${weatherObject.low4}`
-        summary4.textContent = `${weatherObject.summary4.replace("_"," ")}`
+        high4.textContent = `${weatherObject.high4}°`
+        low4.textContent = `${weatherObject.low4}°`
+        
         icon4.src = `${weatherObject.icon4}.png`
 
-        high5.textContent = `${weatherObject.high5}`
-        low5.textContent = `${weatherObject.low5}`
-        summary5.textContent = `${weatherObject.summary5.replace("_"," ")}`
+        high5.textContent = `${weatherObject.high5}°`
+        low5.textContent = `${weatherObject.low5}°`
+        
         icon5.src = `${weatherObject.icon5}.png`
 
-        high6.textContent = `${weatherObject.high6}`
-        low6.textContent = `${weatherObject.low6}`
-        summary6.textContent = `${weatherObject.summary6.replace("_"," ")}`
+        high6.textContent = `${weatherObject.high6}°`
+        low6.textContent = `${weatherObject.low6}°`
+        
         icon6.src = `${weatherObject.icon6}.png`
 
-        high7.textContent = `${weatherObject.high7}`
-        low7.textContent = `${weatherObject.low7}`
-        summary7.textContent = `${weatherObject.summary7.replace("_"," ")}`
+        high7.textContent = `${weatherObject.high7}°`
+        low7.textContent = `${weatherObject.low7}°`
+        
         icon7.src = `${weatherObject.icon7}.png`
 
-        high8.textContent = `${weatherObject.high8}`
-        low8.textContent = `${weatherObject.low8}`
-        summary8.textContent = `${weatherObject.summary8.replace("_"," ")}`
+        high8.textContent = `${weatherObject.high8}°`
+        low8.textContent = `${weatherObject.low8}°`
+        
         icon8.src = `${weatherObject.icon8}.png`
 
-        high9.textContent = `${weatherObject.high9}`
-        low9.textContent = `${weatherObject.low9}`
-        summary9.textContent = `${weatherObject.summary9.replace("_"," ")}`
+        high9.textContent = `${weatherObject.high9}°`
+        low9.textContent = `${weatherObject.low9}°`
+        
         icon9.src = `${weatherObject.icon9}.png`
 
-        high10.textContent = `${weatherObject.high10}`
-        low10.textContent = `${weatherObject.low10}`
-        summary10.textContent = `${weatherObject.summary10.replace("_"," ")}`
+        high10.textContent = `${weatherObject.high10}°`
+        low10.textContent = `${weatherObject.low10}°`
+        
         icon10.src = `${weatherObject.icon10}.png`
 
-        high11.textContent = `${weatherObject.high11}`
-        low11.textContent = `${weatherObject.low11}`
-        summary11.textContent = `${weatherObject.summary11.replace("_"," ")}`
+        high11.textContent = `${weatherObject.high11}°`
+        low11.textContent = `${weatherObject.low11}°`
+        
         icon11.src = `${weatherObject.icon11}.png`
 
-        high12.textContent = `${weatherObject.high12}`
-        low12.textContent = `${weatherObject.low12}`
-        summary12.textContent = `${weatherObject.summary12.replace("_"," ")}`
+        high12.textContent = `${weatherObject.high12}°`
+        low12.textContent = `${weatherObject.low12}°`
+        
         icon12.src = `${weatherObject.icon12}.png`
 
-        high13.textContent = `${weatherObject.high13}`
-        low13.textContent = `${weatherObject.low13}`
-        summary13.textContent = `${weatherObject.summary13.replace("_"," ")}`
+        high13.textContent = `${weatherObject.high13}°`
+        low13.textContent = `${weatherObject.low13}°`
+        
         icon13.src = `${weatherObject.icon13}.png`
 
 

@@ -13,30 +13,82 @@
    
    <div class="inputArea">
 
-    <input type="date" id="startDate" placeholder="startDate">
+    
 
     <div class="searchArea">
-    <input type="text" id="location" size="40" placeholder="Select desired park">
-    <select name="months" id="months">
-        <option value="January">January</option>
-        <option value="February">February</option>
-        <option value="March">March</option>
-        <option value="April">April</option>
-        <option value="May">May</option>
-        <option value="June">June</option>
-        <option value="July">July</option>
-        <option value="August">August</option>
-        <option value="September">September</option>
-        <option value="October">October</option>
-        <option value="November">November</option>
-        <option value="December">December</option>
-
-    </select>
+    
 
     <select name="parks" id="parks">
-        <option value="acadia">Acadia National Park</option>
+        <option value="ACAD">Acadia National Park</option>
+       
+        <option value="ARCH">Arches National Park</option>
+        <option value="BADL">Badlands National Park</option>
+        <option value="BIBE">Big Bend National Park</option>
+        <option value="BISC">Biscayne National Park</option>
+        <option value="BLCA">Black Canyon of the Gunnison National Park</option>
+        <option value="BRCA">Bryce Canyon National Park</option>
+        <option value="CANY">Canyonlands National Park</option>
+        <option value="CARE">Capitol Reef National Park</option>
+        <option value="CARE">Carlsbad Caverns National Park</option>
+        <option value="CHIS">Channel Islands National Park</option>
+        <option value="CONG">Congaree National Park</option>
+        <option value="CRLA">Crater Lake National Park</option>
+        <option value="CUVA">Cuyahoga National Park</option>
+        <option value="DEVA">Death Valley National Park</option>
+        <option value="DENA">Denali National Park</option>
+        <option value="DRTO">Dry Tortugas National Park</option>
+        <option value="EVER">Everglades National Park</option>
+        <option value="GAAR">Gates of The Arctic National Park</option>
+        <option value="JEFF">Gateway Arch National Park</option>
+        <option value="GLAC">Glacier National Park</option>
+        <option value="GLBA">Glacier Bay National Park</option>
+        <option value="GRCA">Grand Canyon National Park</option>
+        <option value="GRTE">Grand Teton National Park</option>
+        <option value="GRBA">Great Basin National Park</option>
+        <option value="GRSA">Great Sand Dunes National Park</option>
+        <option value="GRSM">Great Smokey Mountains National Park</option>
+        <option value="GUMO">Guadalupe Mountians National Park</option>
+        <option value="HALE">Haleakala National Park</option>
+        <option value="HAVO">Hawaii Volcanoes National Park</option>
+        <option value="HOSP">Hot Springs National Park</option>
+        <option value="INDU">Indiana Dunes National Park</option>
+        <option value="ISRO">Isle Royale National Park</option>
+        <option value="JOTR">Joshua Tree National Park</option>
+        <option value="KATM">Katmai National Park</option>
+        <option value="KEFJ">Kenai Fjords National Park</option>
+        <option value="SEKI">Kings Canyon National Park</option>
+        <option value="KOVA">Kobuk Valley National Park</option>
+        <option value="LACL">Lake Clark National Park</option>
+        <option value="LAVO">Lassen Volcanic National Park</option>
+        <option value="MACA">Mammoth Cave National Park</option>
+        <option value="MEVE">Mesa Verde National Park</option>
+        <option value="MORA">Mount Rainer National Park</option>
+        <option value="NPSA">National Park of American Samoa</option>
+        <option value="NERI">New River Gorge National Park</option>
+        <option value="NOCA">North Cascades National Park</option>
+        <option value="OLYM">Olympic National Park</option>
+        <option value="PEFO">Petrified Forrest National Park</option>
+        <option value="PINN">Pinnacles National Park</option>
+        <option value="REDW">Redwood National Park</option>
+        <option value="ROMO">Rocky Mountain National Park</option>
+        <option value="SAGU">Saguaro National Park</option>
+        <option value="SEKI">Sequoia National Park</option>
+        <option value="SHEN">Shenandoah National Park</option>
+        <option value="THRO">Theodore Roosevelt National Park</option>
+        <option value="VIIS">Virgin Isalnds National Park</option>
+        <option value="VOYA">Voyageurs National Park</option>
+        <option value="WHSA">White Sands National Park</option>
+        <option value="WICA">Wind Cave National Park</option>
+        <option value="WRST">Wrangell-St. Elias</option>
+        <option value="YELL">Yellowstone National Park</option>
+        <option value="YOSE">Yosemite National Park</option>
+        <option value="zion">Zion National Park</option>
+
+
+        
+        
     </select>
-    <button id="submit">🔎</button>
+    <button id="submit">Submit</button>
     </div>
     </div>
         </div>
@@ -49,7 +101,7 @@
 
 
     <div id="carouselArea" class="carousel"   data-carousel>
-        
+        <div id="currentWeather"></div>
        
         <ul data-slides>
           
@@ -69,121 +121,7 @@
         <div id="email"></div>
     </div>
 
-    <div id="weatherArea">
-        <div class="day1">
-      <div id="high0" class="high"></div>
-      <div id="low0" class="low"></div>
-     
-      <img id="icon0">
-
-        </div>
-
-      <div class="day2">
-      <div id="high1" class="high"></div>
-      <div id="low1"></div>
-     
-      <img id="icon1">
-    </div>
-
-
-        <div class="day3">
-      <div id="high2" class="high"></div>
-      <div id="low2"></div>
-      
-      <img id="icon2">
-    </div>
-
-
-        <div class="day4">
-      <div id="high3" class="high"></div>
-      <div id="low3"></div>
-      
-      <img id="icon3">
-    </div>
-
-
-     <div class="day5">
-      <div id="high4" class="high"></div>
-      <div id="low4"></div>
-      
-      <img id="icon4">
-    </div>
-
-
-        <div class="day6">
-      <div id="high5" class="high"></div>
-      <div id="low5"></div>
-      
-      <img id="icon5">
-    </div>
-
-
-
-
-    <div class="day7">
-      <div id="high6" class="high"></div>
-      <div id="low6"></div>
-      
-      <img id="icon6">
-    </div>
-
-
-
-      <div class="day8">
-      <div id="high7" class="high"></div>
-      <div id="low7"></div>
-     
-      <img id="icon7">
-    </div>
-
-
-      <div class="day9">
-      <div id="high8" class="high"></div>
-      <div id="low8"></div>
-      
-      <img id="icon8">
-    </div>
-
-
-        <div class="day10">
-      <div id="high9" class="high"></div>
-      <div id="low9"></div>
-      
-      <img id="icon9">
-    </div>
-
-
-        <div class="day11">
-      <div id="high10" class="high"></div>
-      <div id="low10"></div>
-      
-      <img id="icon10">
-    </div>
-
-      <div class="day12">
-      <div id="high11" class="high"></div>
-      <div id="low11"></div>
-      
-      <img id="icon11">
-    </div>
-
-
-
-        <div class="day13">
-      <div id="high12" class="high"></div>
-      <div id="low12"></div>
-      
-      <img id="icon12">
-    </div>
-      
-
-        <div class="day14">
-      <div id="high13" class="high"></div>
-      <div id="low13"></div>
-      
-      <img id="icon13">
-    </div>
-    </div>
+    
 
 </div>
 

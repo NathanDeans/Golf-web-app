@@ -42,6 +42,7 @@ async function getData (input) {
         
         displayPark(parkObj)
         getWeatherData(parkObj)
+        getWeatherForecast(parkObj)
     }
 
     filterData(result);
@@ -82,6 +83,96 @@ const filterWeatherData = (weatherData) => {
 }
 
 filterWeatherData(weatherResult)
+}
+
+async function getWeatherForecast (parkObj) {
+    const url = `https://ai-weather-by-meteosource.p.rapidapi.com/daily?lat=${parkObj.latitude}&lon=${parkObj.longitude}&language=en&units=auto`;
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'fb2d219427mshda3ac1870a9e47cp14b0e0jsn37d5994fb685',
+            'X-RapidAPI-Host': 'ai-weather-by-meteosource.p.rapidapi.com'
+        }
+    
+    };
+	const response = await fetch(url, options);
+	const forecastResult = await response.json();
+	console.log(forecastResult);
+  
+  
+  
+    const filterForecast = (forecastData) => {
+    const forecastObj = {
+        high: forecastData.daily.data[0].temperature_max,
+        low: forecastData.daily.data[0].temperature_min,
+        icon: forecastData.daily.data[0].icon,
+
+        high1: forecastData.daily.data[1].temperature_max,
+        low1: forecastData.daily.data[1].temperature_min,
+       
+        icon1: forecastData.daily.data[1].icon,
+
+
+        high2: forecastData.daily.data[2].temperature_max,
+        low2: forecastData.daily.data[2].temperature_min,
+       
+        icon2: forecastData.daily.data[2].icon,
+
+        high3: forecastData.daily.data[3].temperature_max,
+        low3: forecastData.daily.data[3].temperature_min,
+    
+        icon3: forecastData.daily.data[3].icon,
+
+        high4: forecastData.daily.data[4].temperature_max,
+        low4: forecastData.daily.data[4].temperature_min,
+        
+
+        icon4: forecastData.daily.data[4].icon,
+        high5: forecastData.daily.data[5].temperature_max,
+        low5: forecastData.daily.data[5].temperature_min,
+        
+        icon5: forecastData.daily.data[5].icon,
+        high6: forecastData.daily.data[6].temperature_max,
+        low6: forecastData.daily.data[6].temperature_min,
+        
+        icon6: forecastData.daily.data[6].icon,
+        high7: forecastData.daily.data[7].temperature_max,
+        low7: forecastData.daily.data[7].temperature_min,
+        
+        icon7: forecastData.daily.data[7].icon,
+        high8: forecastData.daily.data[8].temperature_max,
+        low8: forecastData.daily.data[8].temperature_min,
+        
+        icon8: forecastData.daily.data[8].icon,
+        high9: forecastData.daily.data[9].temperature_max,
+        low9: forecastData.daily.data[9].temperature_min,
+        
+        icon9: forecastData.daily.data[9].icon,
+        high10: forecastData.daily.data[10].temperature_max,
+        low10: forecastData.daily.data[10].temperature_min,
+
+        
+        icon10: forecastData.daily.data[10].icon,
+        high11: forecastData.daily.data[11].temperature_max,
+        low11: forecastData.daily.data[11].temperature_min,
+
+       
+        icon11: forecastData.daily.data[11].icon,
+        high12: forecastData.daily.data[12].temperature_max,
+        low12: forecastData.daily.data[12].temperature_min,
+
+        
+        icon12: forecastData.daily.data[12].icon,
+        high13: forecastData.daily.data[13].temperature_max,
+        low13: forecastData.daily.data[13].temperature_min,
+        
+        icon13: forecastData.daily.data[13].icon,
+    }
+
+
+  displayForecast(forecastObj)
+}
+filterForecast(forecastResult)
 }
 
 
@@ -144,6 +235,144 @@ function displayWeather(weatherObject) {
 
     let weatherArea = document.getElementById("weatherArea");
     
+
+}
+
+function displayForecast(forecastObj) {
+
+
+        let high0 = document.getElementById("high0");
+        let low0 = document.getElementById("low0");
+        let summary0 = document.getElementById("summary0");
+        let icon0 = document.getElementById("icon0")
+        let high1 = document.getElementById("high1");
+        let low1 = document.getElementById("low1");
+        let summary1 = document.getElementById("summary1");
+        let icon1 = document.getElementById("icon1")
+        let high2 = document.getElementById("high2");
+        let low2 = document.getElementById("low2");
+        let summary2 = document.getElementById("summary2");
+        let icon2 = document.getElementById("icon2")
+        let high3 = document.getElementById("high3");
+        let low3 = document.getElementById("low3");
+        let summary3 = document.getElementById("summary3");
+        let icon3 = document.getElementById("icon3")
+        let high4 = document.getElementById("high4");
+        let low4 = document.getElementById("low4");
+        let summary4 = document.getElementById("summary4");
+        let icon4 = document.getElementById("icon4")
+        let high5 = document.getElementById("high5");
+        let low5 = document.getElementById("low5");
+        let summary5 = document.getElementById("summary5");
+        let icon5 = document.getElementById("icon5")
+        let high6 = document.getElementById("high6");
+        let low6 = document.getElementById("low6");
+        let summary6 = document.getElementById("summary6");
+        let icon6 = document.getElementById("icon6")
+        let high7 = document.getElementById("high7");
+        let low7 = document.getElementById("low7");
+        let summary7 = document.getElementById("summary7");
+        let icon7 = document.getElementById("icon7")
+        let high8 = document.getElementById("high8");
+        let low8 = document.getElementById("low8");
+        let summary8 = document.getElementById("summary8");
+        let icon8 = document.getElementById("icon8")
+        let high9 = document.getElementById("high9");
+        let low9 = document.getElementById("low9");
+        let summary9 = document.getElementById("summary9");
+        let icon9 = document.getElementById("icon9")
+        let high10 = document.getElementById("high10");
+        let low10 = document.getElementById("low10");
+        let summary10 = document.getElementById("summary10");
+        let icon10 = document.getElementById("icon10")
+        let high11 = document.getElementById("high11");
+        let low11 = document.getElementById("low11");
+        let summary11 = document.getElementById("summary11");
+        let icon11 = document.getElementById("icon11")
+        let high12 = document.getElementById("high12");
+        let low12 = document.getElementById("low12");
+        let summary12 = document.getElementById("summary12");
+        let icon12 = document.getElementById("icon12")
+        let high13 = document.getElementById("high13");
+        let low13 = document.getElementById("low13");
+        let summary13 = document.getElementById("summary13");
+        let icon13 = document.getElementById("icon13")
+
+        
+
+        high0.textContent = `${forecastObj.high}°`
+        low0.textContent = `${forecastObj.low}°`
+        icon0.src = `${forecastObj.icon}.png`
+
+
+        high1.textContent = `${forecastObj.high1}°`
+        low1.textContent = `${forecastObj.low1}°`
+        icon1.src = `${forecastObj.icon1}.png`
+
+        high2.textContent = `${forecastObj.high2}°`
+        low2.textContent = `${forecastObj.low2}°`
+
+        icon2.src = `${forecastObj.icon2}.png`
+
+        high3.textContent = `${forecastObj.high3}°`
+        low3.textContent = `${forecastObj.low3}°`
+
+        icon3.src = `${forecastObj.icon3}.png`
+
+        high4.textContent = `${forecastObj.high4}°`
+        low4.textContent = `${forecastObj.low4}°`
+
+        icon4.src = `${forecastObj.icon4}.png`
+
+        high5.textContent = `${forecastObj.high5}°`
+        low5.textContent = `${forecastObj.low5}°`
+
+        icon5.src = `${forecastObj.icon5}.png`
+
+        high6.textContent = `${forecastObj.high6}°`
+        low6.textContent = `${forecastObj.low6}°`
+
+        icon6.src = `${forecastObj.icon6}.png`
+
+        high7.textContent = `${forecastObj.high7}°`
+        low7.textContent = `${forecastObj.low7}°`
+
+        icon7.src = `${forecastObj.icon7}.png`
+
+        high8.textContent = `${forecastObj.high8}°`
+        low8.textContent = `${forecastObj.low8}°`
+
+        icon8.src = `${forecastObj.icon8}.png`
+
+        high9.textContent = `${forecastObj.high9}°`
+        low9.textContent = `${forecastObj.low9}°`
+
+        icon9.src = `${forecastObj.icon9}.png`
+
+
+        high10.textContent = `${forecastObj.high10}°`
+        low10.textContent = `${forecastObj.low10}°`
+
+        icon10.src = `${forecastObj.icon10}.png`
+
+
+        high11.textContent = `${forecastObj.high11}°`
+        low11.textContent = `${forecastObj.low11}°`
+
+        icon11.src = `${forecastObj.icon11}.png`
+
+
+        high12.textContent = `${forecastObj.high12}°`
+        low12.textContent = `${forecastObj.low12}°`
+
+        icon12.src = `${forecastObj.icon12}.png`
+
+        high13.textContent = `${forecastObj.high13}°`
+        low13.textContent = `${forecastObj.low13}°`
+
+        icon13.src = `${forecastObj.icon13}.png`
+
+        let weatherArea = document.getElementById("weatherArea");
 
 }
 

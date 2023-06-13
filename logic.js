@@ -37,6 +37,13 @@ async function getData (input) {
             address: data.data[0].addresses[0].line1 + ", " + data.data[0].addresses[0].city + ", " + data.data[0].addresses[0].stateCode ,
             email: data.data[0].contacts.emailAddresses[0].emailAddress,
             phoneNumber: data.data[0].contacts.phoneNumbers[0].phoneNumber,
+            MondayHours: data.data[0].operatingHours[0].standardHours.monday,
+            TuesdayHours: data.data[0].operatingHours[0].standardHours.tuesday,
+            WednesdayHours: data.data[0].operatingHours[0].standardHours.wednesday,
+            ThursdayHours: data.data[0].operatingHours[0].standardHours.thursday,
+            FridayHours: data.data[0].operatingHours[0].standardHours.friday,
+            SaturdayHours: data.data[0].operatingHours[0].standardHours.saturday,
+            SundayHours: data.data[0].operatingHours[0].standardHours.sunday,
         }
         console.log(result)
         
@@ -205,6 +212,24 @@ function displayPark(object) {
 
     let email = document.getElementById("email");
     email.textContent = `Email: ${object.email}`
+
+    let mondayHours = document.getElementById("monday")
+    let tuesdayHours = document.getElementById("tuesday")
+    let wednesdayHours = document.getElementById("wednesday")
+    let thursdayHours = document.getElementById("thursday")
+    let fridayHours = document.getElementById("friday")
+    let saturdayHours = document.getElementById("saturday")
+    let sundayHours = document.getElementById("sunday")
+
+    mondayHours.textContent = `Monday:
+    ${object.MondayHours}`
+    tuesdayHours.textContent = `Tuesday:  ${object.TuesdayHours}`
+    wednesdayHours.textContent = `Wednesday:  ${object.WednesdayHours}`
+    thursdayHours.textContent = `Thursday:  ${object.ThursdayHours}`
+    fridayHours.textContent = `Friday:  ${object.FridayHours}`
+    saturdayHours.textContent = `Saturday:  ${object.SaturdayHours}`
+    sundayHours.textContent = `Sunday:  ${object.SundayHours}`
+
    
 
 
@@ -240,6 +265,8 @@ function displayWeather(weatherObject) {
 
 function displayForecast(forecastObj) {
 
+        let forecastTitle = document.getElementById("forecastTitle");
+        let hoursTitle = document.getElementById("hoursTitle")
 
         let high0 = document.getElementById("high0");
         let low0 = document.getElementById("low0");
@@ -297,6 +324,10 @@ function displayForecast(forecastObj) {
         let low13 = document.getElementById("low13");
         let summary13 = document.getElementById("summary13");
         let icon13 = document.getElementById("icon13")
+
+
+        forecastTitle.textContent = "14 Day Forecast";
+        hoursTitle.textContent = "Park Hours"
 
         
 

@@ -136,7 +136,7 @@ p {
 }
 
 .high {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 ul{
@@ -207,7 +207,8 @@ position: absolute;
   #weatherArea{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 1vw;
+    gap: 0.5vw;
+    height: 5vh;
     width: 75vw;
     
   }
@@ -268,6 +269,11 @@ position: absolute;
 
   .hoursTitle {
     font-size: 3rem;
+  }
+
+  .weatherImg{
+    width: 2vw;
+    height: 3vh;
   }
 
  

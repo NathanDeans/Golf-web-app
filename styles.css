@@ -92,7 +92,7 @@ p {
 
 .displayArea{
     width: 75vw;
-    height: 40vh;
+    height: 50vh;
    display: grid;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 0.5fr 1fr 1fr;
@@ -107,7 +107,7 @@ p {
 
 
 #parkName{
-    margin-top: 20px;
+    
     color: white;
     font-size: 5rem;
     grid-row-start: 1;
@@ -119,7 +119,7 @@ p {
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 2;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 #contactInfo {
@@ -127,12 +127,12 @@ p {
     grid-column-start: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 2vh;
 }
 
 #contactInfo > div {
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .high {
@@ -146,7 +146,7 @@ ul{
 
 .carousel {
     width: 40vw;
-    height: 40vh;
+    height: 50vh;
     position: relative;
     grid-row-start: 1;
     grid-row-end: 4;

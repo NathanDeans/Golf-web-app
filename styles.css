@@ -92,7 +92,7 @@ p {
 
 .displayArea{
     width: 75vw;
-    height: 50vh;
+    height: 40vh;
    display: grid;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 0.5fr 1fr 1fr;
@@ -132,7 +132,7 @@ p {
 
 #contactInfo > div {
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .high {
@@ -146,7 +146,7 @@ ul{
 
 .carousel {
     width: 40vw;
-    height: 50vh;
+    height: 40vh;
     position: relative;
     grid-row-start: 1;
     grid-row-end: 4;
@@ -206,17 +206,28 @@ position: absolute;
 
   #weatherArea{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 0.5vw;
     height: 5vh;
     width: 75vw;
-    
   }
-
   #weatherArea > div {
     color: white;
     
   }
+
+  #weatherAreaWeekTwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.5vw;
+    height: 5vh;
+    width: 75vw;
+  }
+
+  #weatherAreaWeekTwo {
+    color: white;
+  }
+  
 
   #address {
     font-size: 2rem;
@@ -246,8 +257,8 @@ position: absolute;
     border-radius: 5px;
     border: 0;
     width: 40vw;
-    height: 8vh;
-    font-size: 4rem;
+    height: 5vh;
+    font-size: 3rem;
     background-color: white;
   }
 

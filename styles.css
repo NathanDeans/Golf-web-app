@@ -208,8 +208,9 @@ position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 0.5vw;
-    height: 5vh;
+    height: 7vh;
     width: 75vw;
+    text-align: center;
   }
   #weatherArea > div {
     color: white;
@@ -220,8 +221,9 @@ position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 0.5vw;
-    height: 5vh;
+    height: 7vh;
     width: 75vw;
+    text-align: center;
   }
 
   #weatherAreaWeekTwo {
@@ -287,4 +289,10 @@ position: absolute;
     height: 3vh;
   }
 
+
+  #weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
  
